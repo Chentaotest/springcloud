@@ -1,0 +1,61 @@
+candidate:
+  upload:
+    path: E:\devtools\candidate
+mybatis-plus:
+  configuration:
+    cache-enabled: true
+    map-underscore-to-camel-case: true
+  global-config:
+    db-column-underline: true
+    field-strategy: 1
+    id-type: 0
+    refresh-mapper: true
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  typeAliasesPackage: org.lazyjee.scancard.model.entity
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+redis:
+  cache:
+    expiration: 3600
+  dbindex: 0
+  host: 192.168.0.40
+  password: HaoPing123
+  pool:
+    maxActive: 50
+    maxIdle: 30
+    maxWait: 50000
+    minEvictableIdleTimeMillis: 300000
+    numTestsPerEvictionRun: 3
+    timeBetweenEvictionRunsMillis: 60000
+  port: 6379
+  timeout: 50000
+spring:
+  application:
+    name: lazyjee-cardscan
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: 84131421
+    url: jdbc:mysql://192.168.0.40:3306/fyt_exam_scan?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+    multipart:
+      enabled: true
+      file-size-threshold: 1MB
+      location: /
+      max-file-size: 50MB
+      max-request-size: 50MB
+  rabbitmq:
+    host: 192.168.0.40
+    password: admin
+    port: 5672
+    username: admin
+  redis:
+    host: 192.168.0.40
+    password: HaoPing123
+    port: 6379
+    remote: false
